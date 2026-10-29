@@ -1,0 +1,77 @@
+<html >
+<head>
+  <title> GENDER CLASSIFICATION ML MODEL DEPLOYMENT </title>
+</head>
+<body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Data Input</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+      }
+      .container {
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          width: 300px;
+      }
+      h2 {
+          text-align: center;
+          margin-bottom: 20px;
+      }
+      label {
+          display: block;
+          margin-bottom: 10px;
+          font-weight: bold;
+      }
+      input[type="text"],
+      input[type="number"],
+      input[type="submit"] {
+          width: 100%;
+          padding: 8px;
+          margin-bottom: 20px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+      }
+      input[type="submit"] {
+          background-color: #28a745;
+          color: white;
+          border: none;
+          cursor: pointer;
+      }
+      input[type="submit"]:hover {
+          background-color: #218838;
+      }
+  </style>
+ <div>
+    <h1>HEART DISEASE PREDICTION </h1>
+    
+        
+        <form action="{{ url_for('predict')}}" method="post">
+        <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            <label for="sex">Sex:</label>
+            <input type="text" id="sex" name="sex" required>
+
+            <label for="bp">Blood Pressure (BP):</label>
+            <input type="text" id="bp" name="bp" required>
+
+            <label for="cholesterol">Cholesterol:</label>
+            <input type="text" id="cholesterol" name="cholesterol" required>
+
+            <input type="submit" value="predict">
+          </form>
+    
+   <br>
+    </div>
+</body>
+</html>
